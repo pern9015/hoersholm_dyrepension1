@@ -1,0 +1,193 @@
+/*
+Theme Name: Divi Child
+Theme URI: http://www.elegantthemes.com/gallery/divi/
+Template: Divi
+Author: Elegant Themes
+Author URI: http://www.elegantthemes.com
+Description: Smart. Flexible. Beautiful. Divi is the most powerful theme in our collection.
+Tags: responsive-layout,one-column,two-columns,three-columns,four-columns,left-sidebar,right-sidebar,custom-background,custom-colors,featured-images,full-width-template,post-formats,rtl-language-support,theme-options,threaded-comments,translation-ready
+Version: 4.9.10.1652101459
+Updated: 2022-05-09 14:04:19
+
+*/
+
+#sidebar {
+  display: none;
+}
+.et_right_sidebar #main-content .container:before {
+  display: none;
+}
+#left-area {
+  width: 100%;
+  padding-bottom: 23px;
+}
+
+/* hovereffekt til nav-menu */
+#top-menu .current-menu-item a::before,
+#top-menu .current_page_item a::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+}
+#top-menu li a:before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  right: 100%;
+  bottom: 50%;
+  background: #608062;
+  height: 3px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+#top-menu li a:hover {
+  opacity: 1 !important;
+}
+#top-menu li a:hover:before {
+  right: 0;
+}
+#top-menu li li a:before {
+  bottom: 10%;
+}
+
+/* testemonial-slider */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.slider {
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  overflow-x: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.slide:nth-of-type(even) {
+  background-color: #f5f3f0;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 400px;
+  scroll-snap-align: center;
+  margin-right: 0px;
+  box-sizing: border-box;
+  background-color: #f5f3f0;
+  transform-origin: center center;
+  transform: scale(1);
+}
+
+.slide__text {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.slide a {
+  background: none;
+  border: none;
+}
+
+.slider__nav {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  width: 240px;
+  margin-left: -100px;
+  text-align: center;
+  top: 360px;
+}
+
+.slider__navlink {
+  background-image: url("https://pernillestrate.dk/hoersholm_dyrepension/wp-content/themes/Divi-child/images/unactive.png");
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  margin: 0 10px 0 10px;
+}
+
+.active {
+  background-image: url("https://pernillestrate.dk/hoersholm_dyrepension/wp-content/themes/Divi-child/images/active.png");
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  margin: 0 10px 0 10px;
+}
+
+.testemonial__img {
+  width: 140px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.ejer {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 500;
+  color: #608062;
+  text-align: right;
+  margin-right: 10vw;
+  font-size: 30px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.slides {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@media only screen and (max-width: 768px) {
+  .slider-container {
+    padding-top: 0px;
+  }
+  .slides {
+    padding: 0px 0 -10px 0;
+  }
+
+  .slider {
+    overflow: visible;
+  }
+
+  .slider__nav {
+    top: 400px;
+  }
+
+  .ejer {
+    font-size: 20px;
+  }
+}

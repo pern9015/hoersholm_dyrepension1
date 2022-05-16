@@ -1,0 +1,58 @@
+/*
+Theme Name: Divi Child
+Theme URI: http://www.elegantthemes.com/gallery/divi/
+Template: Divi
+Author: Elegant Themes
+Author URI: http://www.elegantthemes.com
+Description: Smart. Flexible. Beautiful. Divi is the most powerful theme in our collection.
+Tags: responsive-layout,one-column,two-columns,three-columns,four-columns,left-sidebar,right-sidebar,custom-background,custom-colors,featured-images,full-width-template,post-formats,rtl-language-support,theme-options,threaded-comments,translation-ready
+Version: 4.9.10.1638363037
+Updated: 2021-12-01 12:50:37
+
+*/
+
+#sidebar {
+  display: none;
+}
+
+.et_right_sidebar #main-content .container:before {
+  display: none;
+}
+
+#left-area {
+  width: 100%;
+  padding-bottom: 23px;
+}
+#top-menu .current-menu-item a::before,
+#top-menu .current_page_item a::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+}
+#top-menu li a:before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  right: 100%;
+  bottom: 50%;
+  background: #15bf86; /*** COLOR OF THE LINE ***/
+  height: 3px; /*** THICKNESS OF THE LINE ***/
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+#top-menu li a:hover {
+  opacity: 1 !important;
+}
+#top-menu li a:hover:before {
+  right: 0;
+}
+#top-menu li li a:before {
+  bottom: 10%;
+}

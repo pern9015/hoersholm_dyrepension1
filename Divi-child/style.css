@@ -10,6 +10,13 @@ Version: 4.9.10.1652101459
 Updated: 2022-05-09 14:04:19
 
 */
+body {
+  background-color: #f5f3f0;
+}
+
+#main-content {
+  background-color: #f5f3f0;
+}
 
 #sidebar {
   display: none;
@@ -188,7 +195,7 @@ p {
     top: 400px;
   }
 
-  .ejer {
+  h2.ejer {
     font-size: 20px;
   }
 }

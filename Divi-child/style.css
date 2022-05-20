@@ -140,7 +140,7 @@ body {
   margin: 0 10px 0 10px;
 }
 
-.active {
+.active_nav {
   background-image: url("https://pernillestrate.dk/hoersholm_dyrepension/wp-content/themes/Divi-child/images/active.png");
   display: inline-block;
   height: 35px;

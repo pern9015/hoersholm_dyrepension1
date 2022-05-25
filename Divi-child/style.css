@@ -115,7 +115,7 @@ body {
 }
 
 .active_nav,
-.active_nav:hover {
+.slider__navlink:hover {
   background-image: url("https://pernillestrate.dk/hoersholm_dyrepension/wp-content/themes/Divi-child/images/active.png");
 }
 

@@ -72,23 +72,57 @@ body {
   height: 100%;
 }
 
-.slider {
-  width: 100%;
-  max-width: 900px;
-  height: 400px;
-  margin: 20px;
-  text-align: center;
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+
+  margin-top: -22px;
+
+  color: #608062;
+  font-weight: bold;
+  font-size: 55px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-.slides {
-  display: flex;
-  overflow-x: scroll;
-  position: relative;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slider__nav {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 12%;
+  left: 41%;
+}
+
+/* The dots/bullets/indicators */
+.slider__navlink {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+
+  background-image: url("https://pernillestrate.dk/hoersholm_dyrepension/wp-content/themes/Divi-child/images/unactive.png");
+  border-radius: 50%;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.active_nav,
+.active_nav:hover {
+  background-image: url("https://pernillestrate.dk/hoersholm_dyrepension/wp-content/themes/Divi-child/images/active.png");
+}
+
+.slider {
+  max-width: 900px;
+  margin: 20px;
+  text-align: center;
 }
 
 .slide:nth-of-type(even) {
@@ -96,18 +130,9 @@ body {
 }
 
 .slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  width: 100%;
   height: 400px;
-  scroll-snap-align: center;
-  margin-right: 0px;
-  box-sizing: border-box;
+
   background-color: #f5f3f0;
-  transform-origin: center center;
-  transform: scale(1);
 }
 
 .slide__text {
@@ -121,36 +146,16 @@ body {
   border: none;
 }
 
-.slider__nav {
-  box-sizing: border-box;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  width: 240px;
-  margin-left: -100px;
-  text-align: center;
-  top: 360px;
-}
-
-.slider__navlink {
-  background-image: url("https://pernillestrate.dk/hoersholm_dyrepension/wp-content/themes/Divi-child/images/unactive.png");
-  display: inline-block;
-  height: 35px;
-  width: 35px;
-  margin: 0 10px 0 10px;
-}
-
 .active_nav {
   background-image: url("https://pernillestrate.dk/hoersholm_dyrepension/wp-content/themes/Divi-child/images/active.png");
   display: inline-block;
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
   margin: 0 10px 0 10px;
 }
 
 .testemonial__img {
-  width: 140px;
-  height: 100%;
+  width: 20%;
 }
 
 p {
@@ -197,5 +202,17 @@ p {
 
   h2.ejer {
     font-size: 20px;
+  }
+  .slider__nav {
+    top: 530px;
+    left: 23%;
+  }
+  .testemonial__img {
+    width: 25vw;
+  }
+
+  .prev,
+  .next {
+    top: 100%;
   }
 }
